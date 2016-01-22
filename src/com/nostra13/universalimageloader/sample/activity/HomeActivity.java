@@ -15,6 +15,7 @@
  *******************************************************************************/
 package com.nostra13.universalimageloader.sample.activity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ import java.io.InputStream;
 /**
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
  */
+@SuppressLint("NewApi")
 public class HomeActivity extends Activity {
 
 	private static final String TEST_FILE_NAME = "Universal Image Loader @#&=+-_.,!()~'%20.png";
@@ -47,36 +49,38 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ac_home);
 
+		//把测试文件copy到sdcard中
 		File testImageOnSdCard = new File("/mnt/sdcard", TEST_FILE_NAME);
 		if (!testImageOnSdCard.exists()) {
 			copyTestImageToSdCard(testImageOnSdCard);
 		}
 	}
 
+	//ListView展示
 	public void onImageListClick(View view) {
 		Intent intent = new Intent(this, SimpleImageActivity.class);
 		intent.putExtra(Constants.Extra.FRAGMENT_INDEX, ImageListFragment.INDEX);
 		startActivity(intent);
 	}
-
+    //GridView展示
 	public void onImageGridClick(View view) {
 		Intent intent = new Intent(this, SimpleImageActivity.class);
 		intent.putExtra(Constants.Extra.FRAGMENT_INDEX, ImageGridFragment.INDEX);
 		startActivity(intent);
 	}
-
+    //ViewPager展示
 	public void onImagePagerClick(View view) {
 		Intent intent = new Intent(this, SimpleImageActivity.class);
 		intent.putExtra(Constants.Extra.FRAGMENT_INDEX, ImagePagerFragment.INDEX);
 		startActivity(intent);
 	}
-
+    //Gallery展示
 	public void onImageGalleryClick(View view) {
 		Intent intent = new Intent(this, SimpleImageActivity.class);
 		intent.putExtra(Constants.Extra.FRAGMENT_INDEX, ImageGalleryFragment.INDEX);
 		startActivity(intent);
 	}
-
+     //ListView+GridView展示
 	public void onFragmentsClick(View view) {
 		Intent intent = new Intent(this, ComplexImageActivity.class);
 		startActivity(intent);
@@ -107,7 +111,10 @@ public class HomeActivity extends Activity {
 				return false;
 		}
 	}
-
+	/**
+	 * 把Assert文件下的测试文件拷贝到sdard中
+	 * @param testImageOnSdCard
+	 */
 	private void copyTestImageToSdCard(final File testImageOnSdCard) {
 		new Thread(new Runnable() {
 			@Override

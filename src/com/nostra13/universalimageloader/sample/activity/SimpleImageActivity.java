@@ -25,7 +25,8 @@ import com.nostra13.universalimageloader.sample.fragment.ImageGridFragment;
 import com.nostra13.universalimageloader.sample.fragment.ImageListFragment;
 import com.nostra13.universalimageloader.sample.fragment.ImagePagerFragment;
 
-/**
+/** 
+ * 点击点击的不同，加载不同的Fragment
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
  */
 public class SimpleImageActivity extends FragmentActivity {
@@ -34,6 +35,7 @@ public class SimpleImageActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 
 		int frIndex = getIntent().getIntExtra(Constants.Extra.FRAGMENT_INDEX, 0);
+		
 		Fragment fr;
 		String tag;
 		int titleRes;

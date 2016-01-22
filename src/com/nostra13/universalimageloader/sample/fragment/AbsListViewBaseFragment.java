@@ -26,6 +26,7 @@ import com.nostra13.universalimageloader.sample.R;
 import com.nostra13.universalimageloader.sample.activity.SimpleImageActivity;
 
 /**
+ * 设置了菜单，滚动监听
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
  */
 public abstract class AbsListViewBaseFragment extends BaseFragment {

@@ -24,6 +24,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.sample.R;
 
 /**
+ * 基础Fragment，加载菜单
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
  */
 public abstract class BaseFragment extends Fragment {

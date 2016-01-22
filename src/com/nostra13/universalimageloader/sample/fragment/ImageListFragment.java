@@ -33,6 +33,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.CircleBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.nostra13.universalimageloader.sample.Constants;
@@ -87,8 +88,9 @@ public class ImageListFragment extends AbsListViewBaseFragment {
 					.showImageOnFail(R.drawable.ic_error)
 					.cacheInMemory(true)
 					.cacheOnDisk(true)
-					.considerExifParams(true)
-					.displayer(new CircleBitmapDisplayer(Color.WHITE, 5))
+					.considerExifParams(true) //是否考虑JPEG图像EXIF参数（旋转，翻转）
+					//.displayer(new CircleBitmapDisplayer(Color.WHITE, 5))
+					.displayer(new RoundedBitmapDisplayer(20))
 					.build();
 		}
 
@@ -142,6 +144,7 @@ public class ImageListFragment extends AbsListViewBaseFragment {
 		public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
 			if (loadedImage != null) {
 				ImageView imageView = (ImageView) view;
+				//如果是第一次加载，放入到集合中
 				boolean firstDisplay = !displayedImages.contains(imageUri);
 				if (firstDisplay) {
 					FadeInBitmapDisplayer.animate(imageView, 500);

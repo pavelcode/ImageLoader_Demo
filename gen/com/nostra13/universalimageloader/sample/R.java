@@ -36,18 +36,23 @@ public final class R {
     public static final class id {
         public static final int gallery=0x7f090002;
         public static final int grid=0x7f090003;
-        public static final int image=0x7f090004;
-        public static final int image_left=0x7f090008;
-        public static final int image_right=0x7f090009;
-        public static final int item_clear_disc_cache=0x7f09000b;
-        public static final int item_clear_memory_cache=0x7f09000a;
-        public static final int item_pause_on_fling=0x7f09000d;
-        public static final int item_pause_on_scroll=0x7f09000c;
-        public static final int loading=0x7f090007;
+        public static final int image=0x7f090009;
+        public static final int image_left=0x7f09000d;
+        public static final int image_right=0x7f09000e;
+        public static final int imageloader_demo01_iv=0x7f090004;
+        public static final int imageloader_demo02_iv=0x7f090005;
+        public static final int imageloader_demo03_iv=0x7f090006;
+        public static final int imageloader_demo04_iv=0x7f090007;
+        public static final int imageloader_demo05_iv=0x7f090008;
+        public static final int item_clear_disc_cache=0x7f090010;
+        public static final int item_clear_memory_cache=0x7f09000f;
+        public static final int item_pause_on_fling=0x7f090012;
+        public static final int item_pause_on_scroll=0x7f090011;
+        public static final int loading=0x7f09000c;
         public static final int pager=0x7f090000;
         public static final int pager_title_strip=0x7f090001;
-        public static final int progress=0x7f090005;
-        public static final int text=0x7f090006;
+        public static final int progress=0x7f09000a;
+        public static final int text=0x7f09000b;
     }
     public static final class layout {
         public static final int ac_complex=0x7f030000;
@@ -57,11 +62,16 @@ public final class R {
         public static final int fr_image_grid=0x7f030004;
         public static final int fr_image_list=0x7f030005;
         public static final int fr_image_pager=0x7f030006;
-        public static final int item_gallery_image=0x7f030007;
-        public static final int item_grid_image=0x7f030008;
-        public static final int item_list_image=0x7f030009;
-        public static final int item_pager_image=0x7f03000a;
-        public static final int widget=0x7f03000b;
+        public static final int imageloader_demo01=0x7f030007;
+        public static final int imageloader_demo02=0x7f030008;
+        public static final int imageloader_demo03=0x7f030009;
+        public static final int imageloader_demo04=0x7f03000a;
+        public static final int imageloader_demo05=0x7f03000b;
+        public static final int item_gallery_image=0x7f03000c;
+        public static final int item_grid_image=0x7f03000d;
+        public static final int item_list_image=0x7f03000e;
+        public static final int item_pager_image=0x7f03000f;
+        public static final int widget=0x7f030010;
     }
     public static final class menu {
         public static final int main=0x7f080000;
